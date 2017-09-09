@@ -1,0 +1,23 @@
+#! /bin/bash
+
+# Git Configuration
+git config user.email "travis.ci@howfakeisthis.com"
+git config user.name "Travis CI"
+
+git clone https://${GH_TOKEN}@github.com/$TRAVIS_REPO_SLUG.git $TRAVIS_REPO_SLUG
+cd $TRAVIS_REPO_SLUG
+
+mkdir ../build
+cp -R ./image ../build
+cp favicon.ico ../build
+cp index.html ../build
+cp Logo.ai ../build
+cp Logo.png ../build
+
+git checkout gh-pages
+rm -rf ./*
+mv -R ../build/* .
+
+git add .
+git commit -m "Updating How Fake Is This (build ${TRAVIS_BUILD_NUMBER})" || true
+git push --quiet origin gh-pages || true
