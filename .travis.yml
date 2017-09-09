@@ -1,12 +1,11 @@
 language: html
-
 branches:
   only:
-    - master
-
+  - master
 before_script:
-  - chmod +x ./scripts/build
-
-script: ./scripts/build
-
+- chmod +x ./scripts/build
+script: "./scripts/build"
 sudo: true
+env:
+  global:
+    secure: XKnkYC373/ofc9MicLKsSKtZATwq3kPFTRXlderUjwVAwmLJYldEinB/UhpazLAdJxYonfo+ycT6ZXHmkFkwOSvpkgCY18XMq3GmZRk/3c7wi38S6d1VUwvztbF69oBPs7geBpEi7tDN73AQkRPOKHmT/1T13PIM+MvmWoWAH1hBerGpOHolgRsvp2SvAafHPDHm8WTVJONIdK9QugypFbcoKTND5xembSkK+BaWJFxhos2DoqY4nhdKxtzMmayg3CQAi6IcQ/6xbidxJqYrgsSd+h1xAXIJxcUNcnOdWg6Z1Y4Yu2xtWJCPROhUuwwWglXSxk+VxaYC/aKPT9upf3Q5hvSfHLRA0hqt1mZQp12j6HgfoI/tIRjZZPBFkl9W0f2jJ7L4YFHVd6SbtQikSsc07XMV0tvUfWSyu1iJx1cu+E9ABpZWT7FwPSBHEyIl8Czjhruui5qRFeJUfXsehAnVvTeXc7r2IsndaCUz1EwKLT734jl5ooLDjNotjYQBtCQQIH7eHneiUe8LIo+bcIopTT2S8+Ac7d3VEvfg5aSlTf2PMGdlF6Dw0oIzZEYDQ4wfGfWEWC/3SPv3CVHnZcsToU0I7k/Po+vahgU8pRYVMFVy3g57i7XNwGb6kBYFem2nojF2ZVC0nL/sT886tYAkXvjFBsI/IMjXIXLMz3o=
