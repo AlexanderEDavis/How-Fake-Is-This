@@ -16,7 +16,7 @@ cp Logo.png ../build
 
 git checkout gh-pages
 rm -rf ./*
-mv -R ../build/* .
+cp -R ../build/* .
 
 git add .
 git commit -m "Updating How Fake Is This (build ${TRAVIS_BUILD_NUMBER})" || true
